@@ -13,7 +13,12 @@ void getDistro() {
             std::string line;
             while (getline(osRelease, line)) {
                 if (strstr(line.c_str(), "ID=") == line.c_str()) {
-                    memcpy(distro, line.substr(3).c_str(), 32);
+                    if (line.substr(3) == "ubuntu") {
+                        memcpy(distro, "shitbuntu", sizeof("shitbuntu")); // pMeme
+                    }
+                    else {
+                        memcpy(distro, line.substr(3).c_str(), 32);
+                    }
                 }
             }
             osRelease.close();
