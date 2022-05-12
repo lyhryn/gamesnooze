@@ -16,6 +16,9 @@ void getDistro() {
                     if (line.substr(3) == "ubuntu") {
                         memcpy(distro, "shitbuntu", sizeof("shitbuntu")); // pMeme
                     }
+                    else if (line.substr(3) == "arch") {
+                        memcpy(distro, "arch (btw)", sizeof("arch (btw)")); // pMeme
+                    }
                     else {
                         memcpy(distro, line.substr(3).c_str(), 32);
                     }
